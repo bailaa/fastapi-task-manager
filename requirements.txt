@@ -2,7 +2,11 @@ fastapi
 uvicorn[standard]
 sqlalchemy[asyncio]>=2.0
 asyncpg
+aiosqlite
 pydantic>=2
 pydantic-settings
 email-validator
 alembic
+pytest
+pytest-asyncio
+httpx
