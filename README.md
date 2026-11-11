@@ -1,3 +1,5 @@
+![CI](https://github.com/bailaa/fastapi-task-manager/actions/workflows/ci.yml/badge.svg)
+
 # Менеджер задач: REST API на FastAPI + PostgreSQL
 
 Практическая работа № 2. Разработка REST API на FastAPI с использованием PostgreSQL, SQLAlchemy и Pydantic.
@@ -161,6 +163,34 @@ GET `/tasks/2` после удаления — **404 Not Found**:
 ### Таблицы в БД (`\dt` в psql)
 
 ![psql \dt](docs/screenshots/13_psql_dt.png)
+
+## Тестирование
+
+Локально (нужен Python 3.12):
+
+    pytest -q
+
+Через Docker Compose:
+
+    docker compose up -d db
+    docker compose run --rm app pytest -q
+
+## Контейнеры и образы
+
+    docker compose up --build
+
+- GHCR: `ghcr.io/bailaa/fastapi-task-manager:latest`
+- Docker Hub: `<твой_username>/fastapi-task-manager:latest`
+
+## CI/CD
+
+GitHub Actions (`.github/workflows/ci.yml`): при push в `main` — тесты, затем сборка и публикация образа в GHCR и Docker Hub.
+
+### Успешный pipeline
+![CI success](docs/screenshots/20_ci_success.png)
+
+### Упавший pipeline (шаг 8)
+![CI failure](docs/screenshots/21_ci_failure.png)
 
 ## Ответы на контрольные вопросы
 
