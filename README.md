@@ -1,3 +1,5 @@
+![CI](https://github.com/bailaa/fastapi-task-manager/actions/workflows/ci.yml/badge.svg)
+
 # Менеджер задач: REST API на FastAPI + PostgreSQL
 
 Практическая работа № 2. Разработка REST API на FastAPI с использованием PostgreSQL, SQLAlchemy и Pydantic.
